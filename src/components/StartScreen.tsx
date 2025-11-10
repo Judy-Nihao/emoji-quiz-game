@@ -50,13 +50,11 @@ export const StartScreen = ({ onStart }: StartScreenProps) => {
             {/* Main content area */}
             <div className="gbc-content">
               {/* Mascot - pixelated emoji */}
-              <motion.div
-                animate={{ y: [0, -4, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="text-center mb-4"
-              >
-                <div className="text-6xl md:text-7xl inline-block">🤔</div>
-              </motion.div>
+              <div className="text-center mb-4">
+                <div className="text-6xl md:text-7xl min-h-20 animate-float">
+                  🤔
+                </div>
+              </div>
 
               {/* Game Logo - English title */}
               <div className="mb-6">
