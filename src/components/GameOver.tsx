@@ -102,7 +102,7 @@ export const GameOver = ({
               {/* Score display - GBC stats style */}
               <div className="gbc-inner-subtle p-5 mb-4">
                 <div className="text-center mb-3">
-                  <p className="text-xs leading-4 text-gray-400 text-nowrap whitespace-pre">
+                  <p className="text-2xs leading-4 text-gray-400 text-nowrap whitespace-pre">
                     {t("game_over.final_score")}
                   </p>
                 </div>
@@ -138,7 +138,7 @@ export const GameOver = ({
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: i * 0.1 }}
-                      className={`text-[30px] leading-[36px] ${
+                      className={`text-[30px] leading-9 ${
                         i < Math.round(percentage / 20)
                           ? "opacity-100"
                           : "opacity-20"
