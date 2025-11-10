@@ -63,18 +63,16 @@ export const ErrorScreen = ({
           {/* Content */}
           <div className="gbc-content">
             {/* Message box - Pokémon dialogue style with decorative frame */}
-            <div className="mb-4">
-              <PokemonFrame>
-                <DialogueText center>
-                  {isTimeout
-                    ? t("error_screen.message_timeout")
-                    : t("error_screen.message_wrong")}
-                </DialogueText>
-              </PokemonFrame>
-            </div>
+            <PokemonFrame>
+              <DialogueText center>
+                {isTimeout
+                  ? t("error_screen.message_timeout")
+                  : t("error_screen.message_wrong")}
+              </DialogueText>
+            </PokemonFrame>
 
             {/* Emoji reveal */}
-            <div className="mb-6 perspective-1000">
+            <div className="perspective-1000">
               <motion.div
                 className="relative mx-auto text-6xl md:text-7xl"
                 style={{ transformStyle: "preserve-3d" }}
@@ -88,7 +86,7 @@ export const ErrorScreen = ({
                     backfaceVisibility: "hidden",
                   }}
                 >
-                  <div className="filter brightness-0">{emoji}</div>
+                  <div className="filter brightness-0 min-h-20">{emoji}</div>
                 </motion.div>
 
                 {/* Back: revealed emoji */}
@@ -100,6 +98,7 @@ export const ErrorScreen = ({
                   }}
                 >
                   <motion.div
+                    className="min-h-20"
                     animate={{ rotate: [0, -5, 5, 0] }}
                     transition={{
                       duration: 1,

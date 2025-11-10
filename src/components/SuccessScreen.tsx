@@ -69,19 +69,19 @@ export const SuccessScreen = ({ emoji, onContinue }: SuccessScreenProps) => {
             {/* Emoji reveal with simple flip */}
             <div className="mb-4 perspective-1000">
               <motion.div
-                className="relative mx-auto text-6xl md:text-7xl pb-4"
+                className="relative mx-auto text-6xl md:text-7xl"
                 style={{ transformStyle: "preserve-3d" }}
                 animate={{ rotateY: showEmoji ? 180 : 0 }}
                 transition={{ duration: 0.4 }}
               >
                 {/* Front: silhouette */}
                 <motion.div
-                  className="absolute inset-0 flex items-center justify-center pb-4"
+                  className="absolute inset-0 flex items-center justify-center"
                   style={{
                     backfaceVisibility: "hidden",
                   }}
                 >
-                  <div className="filter brightness-0">{emoji}</div>
+                  <div className="filter brightness-0 min-h-20">{emoji}</div>
                 </motion.div>
 
                 {/* Back: revealed emoji */}
@@ -93,6 +93,7 @@ export const SuccessScreen = ({ emoji, onContinue }: SuccessScreenProps) => {
                   }}
                 >
                   <motion.div
+                    className="min-h-20"
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 1, repeat: Infinity }}
                   >

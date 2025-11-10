@@ -56,24 +56,21 @@ export const EmojiQuiz = ({
 
             {/* Silhouette display */}
             <div className="gbc-content p-4">
-              <motion.div
-                animate={{ y: [0, -4, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="relative flex items-center justify-center"
-              >
+              <div className="relative flex items-center justify-around">
+                {/* Question marks - pixel style */}
+                <div className="text-2xl md:text-3xl text-black">?</div>
                 {/* Silhouette */}
-                <div className="text-6xl md:text-8xl filter brightness-0">
+                <div
+                  key={emoji}
+                  className="text-6xl md:text-8xl min-h-20 md:min-h-28 filter brightness-0 animate-pulseScale"
+                >
                   {emoji}
                 </div>
 
                 {/* Question marks - pixel style */}
-                <div className="absolute -top-1 -left-1 text-2xl md:text-3xl text-black">
-                  ?
-                </div>
-                <div className="absolute -top-1 -right-1 text-2xl md:text-3xl text-black">
-                  ?
-                </div>
-              </motion.div>
+
+                <div className="text-2xl md:text-3xl text-black">?</div>
+              </div>
             </div>
 
             {/* Prompt - Pokémon battle style */}
