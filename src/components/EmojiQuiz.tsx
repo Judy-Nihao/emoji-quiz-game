@@ -48,14 +48,14 @@ export const EmojiQuiz = ({
         <div className="gbc-panel-outer-thick mb-3">
           <div className="gbc-window">
             {/* Header */}
-            <div className="gbc-header py-3.5 px-1.5 mb-1">
+            <div className="gbc-header py-2 px-1.5 mb-1">
               <h2 className="text-center text-xs md:text-sm leading-snug">
                 {t("game.who_am_i")}
               </h2>
             </div>
 
             {/* Silhouette display */}
-            <div className="gbc-content p-4">
+            <div className="gbc-content p-2">
               <div className="relative flex items-center justify-around">
                 {/* Question marks - pixel style */}
                 <div className="text-2xl md:text-3xl text-black">?</div>
@@ -98,7 +98,7 @@ export const EmojiQuiz = ({
                     onClick={(e) => handleAnswer(e, option)}
                     onMouseEnter={() => handleMouseEnter(index)}
                     disabled={disabled}
-                    className="text-left py-7 group relative gbc-button text-xs bg-white text-black hover:bg-gbc-light transition-colors flex items-center justify-start w-full"
+                    className="text-left py-5 group relative gbc-button text-xs bg-white text-black hover:bg-gbc-light transition-colors flex items-center justify-start w-full"
                   >
                     {/* Arrow indicator - Pokémon menu style */}
                     <motion.span

@@ -8,58 +8,37 @@ interface ScoreboardProps {
   total: number;
 }
 
-export const Scoreboard = ({ correct, wrong, current, total }: ScoreboardProps) => {
+export const Scoreboard = ({
+  correct,
+  wrong,
+  current,
+  total,
+}: ScoreboardProps) => {
   const { t } = useTranslation();
   return (
     <div className="flex gap-1 w-full">
       {/* Correct count - GBC stats style */}
-      <motion.div
-        whileHover={{ y: -2 }}
-        className="gbc-panel-outer-thin flex-1"
-      >
-        <div className="gbc-stat-box px-2 py-1">
-          <div className="text-sm mb-0.5">
-            ✓
-          </div>
-          <div className="text-[8px] mb-0.5 leading-none text-[#8B9594]">
-            {t('scoreboard.ok')}
-          </div>
+      <motion.div whileHover={{ y: -2 }} className="flex-1 text-center">
+        <div className="py-2">
           <div className="text-sm text-black">
-            {correct}
+            {t("scoreboard.ok")}:
+            <span className="text-green-700">{correct}</span>
           </div>
         </div>
       </motion.div>
-      
+
       {/* Wrong count */}
-      <motion.div
-        whileHover={{ y: -2 }}
-        className="gbc-panel-outer-thin flex-1"
-      >
-        <div className="gbc-stat-box px-2 py-1">
-          <div className="text-sm mb-0.5">
-            ✗
-          </div>
-          <div className="text-[8px] mb-0.5 leading-none text-[#8B9594]">
-            {t('scoreboard.ng')}
-          </div>
+      <motion.div whileHover={{ y: -2 }} className="flex-1 text-center">
+        <div className="py-2">
           <div className="text-sm text-black">
-            {wrong}
+            {t("scoreboard.ng")}:<span className="text-red-700">{wrong}</span>
           </div>
         </div>
       </motion.div>
-      
+
       {/* Question progress */}
-      <motion.div
-        whileHover={{ y: -2 }}
-        className="gbc-panel-outer-thin flex-1"
-      >
-        <div className="gbc-stat-box px-2 py-1">
-          <div className="text-sm mb-0.5">
-            #
-          </div>
-          <div className="text-[8px] mb-0.5 leading-none text-[#8B9594]">
-            {t('scoreboard.no')}
-          </div>
+      <motion.div whileHover={{ y: -2 }} className="flex-1 text-center">
+        <div className="py-2">
           <div className="text-sm text-black">
             {current}/{total}
           </div>
@@ -67,4 +46,4 @@ export const Scoreboard = ({ correct, wrong, current, total }: ScoreboardProps) 
       </motion.div>
     </div>
   );
-}
+};

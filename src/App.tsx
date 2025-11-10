@@ -188,7 +188,7 @@ const App = () => {
   const currentTopic = TOPICS.find((t) => t.id === selectedTopic);
 
   return (
-    <div className="flex flex-col justify-center items-center p-3 bg-[#B4BFBE] min-h-screen overflow-auto gbc-scanlines">
+    <div className="flex flex-col justify-center items-center p-3 bg-[#B4BFBE] h-app overflow-auto gbc-scanlines">
       <div className="max-w-[500px] w-full">
         {/* Topic display - full width, centered, 150% larger, with 16px spacing */}
         {currentTopic && (
@@ -256,14 +256,14 @@ const App = () => {
         <div className="mt-2 flex items-center justify-between">
           <Button
             onClick={goToTopicSelection}
-            className="gbc-button bg-black text-white leading-normal min-w-12 min-h-12 px-4"
+            className="gbc-button bg-black text-white leading-normal min-w-12 min-h-10 px-4"
           >
             <ArrowLeft size={12} className="mr-2 inline" />
             {t("common.back")}
           </Button>
 
           {/* Sound toggle */}
-          <div className="-mr-[10px">
+          <div className="">
             <SoundToggle />
           </div>
         </div>

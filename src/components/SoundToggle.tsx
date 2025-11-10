@@ -21,7 +21,7 @@ export const SoundToggle = () => {
   return (
     <button
       onClick={handleToggle}
-      className="gbc-button bg-white text-black p-2 min-w-12 min-h-12 hover:bg-gbc-light active:shadow-[inset_2px_2px_0_#8B9594] transition-all flex items-center justify-center"
+      className="gbc-button bg-white text-black p-2 min-w-12 min-h-10 hover:bg-gbc-light active:shadow-[inset_2px_2px_0_#8B9594] transition-all flex items-center justify-center"
       aria-label={enabled ? "Mute sound" : "Unmute sound"}
     >
       {enabled ? (

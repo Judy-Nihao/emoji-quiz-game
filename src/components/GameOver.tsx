@@ -100,31 +100,31 @@ export const GameOver = ({
               </div>
 
               {/* Score display - GBC stats style */}
-              <div className="gbc-inner-subtle p-5 mb-4">
+              <div className="gbc-inner-subtle px-5 py-3   mb-4">
                 <div className="text-center mb-3">
                   <p className="text-2xs leading-4 text-gray-400 text-nowrap whitespace-pre">
                     {t("game_over.final_score")}
                   </p>
                 </div>
 
-                <div className="space-y-6 text-[12px] leading-6 text-black">
-                  <div className="flex justify-between items-center h-9">
+                <div className="space-y-3 text-xs text-black">
+                  <div className="flex justify-between items-center h-6">
                     <span>{t("scoreboard.ok")}</span>
-                    <div className="bg-[#14a946] text-white w-16 h-9 border-2 border-black flex items-center justify-center">
+                    <div className="bg-green-500 text-white w-16 h-6 border-2 border-black flex items-center justify-center">
                       {correct}
                     </div>
                   </div>
                   <hr />
-                  <div className="flex justify-between items-center h-9 9">
+                  <div className="flex justify-between items-center h-6 9">
                     <span>{t("scoreboard.ng")}</span>
-                    <div className="bg-[#e14040] text-white w-16 h-9 border-2 border-black flex items-center justify-center">
+                    <div className="bg-red-500 text-white w-16 h-6 border-2 border-black flex items-center justify-center">
                       {wrong}
                     </div>
                   </div>
                   <hr />
-                  <div className="flex justify-between items-center h-9 9">
+                  <div className="flex justify-between items-center h-6 9">
                     <span>{t("game_over.rate")}</span>
-                    <div className="bg-black text-white w-16 h-9 border-2 border-black flex items-center justify-center">
+                    <div className="bg-black text-white w-16 h-6 border-2 border-black flex items-center justify-center">
                       {percentage}%
                     </div>
                   </div>
