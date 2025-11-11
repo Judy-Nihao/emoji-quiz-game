@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { playCursorSound, playConfirmSound } from "../utils/soundEffects";
@@ -19,6 +19,13 @@ export const EmojiQuiz = ({
 }: EmojiQuizProps) => {
   const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  // Reset hovered and active index when emoji (new question) changes
+  useEffect(() => {
+    setHoveredIndex(null);
+    setActiveIndex(null);
+  }, [emoji]);
 
   const handleMouseEnter = (index: number) => {
     if (hoveredIndex !== index && !disabled) {
@@ -27,9 +34,10 @@ export const EmojiQuiz = ({
     }
   };
 
-  const handleAnswer = (e: React.MouseEvent, option: string) => {
+  const handleAnswer = (e: React.MouseEvent, option: string, index: number) => {
     if (!disabled) {
       e.stopPropagation();
+      setActiveIndex(index); // remember user's clicked option
       playConfirmSound();
       setTimeout(() => {
         onAnswer(option);
@@ -95,14 +103,18 @@ export const EmojiQuiz = ({
                   className="flex"
                 >
                   <Button
-                    onClick={(e) => handleAnswer(e, option)}
+                    onClick={(e) => handleAnswer(e, option, index)}
                     onMouseEnter={() => handleMouseEnter(index)}
                     disabled={disabled}
                     className="text-left py-5 group relative gbc-button text-xs bg-white text-black hover:bg-gbc-light transition-colors flex items-center justify-start w-full"
                   >
                     {/* Arrow indicator - Pokémon menu style */}
                     <motion.span
-                      className="opacity-0 group-hover:opacity-100 text-xs mb-1.5"
+                      className={`text-xs mb-1.5 ${
+                        hoveredIndex === index || activeIndex === index
+                          ? "opacity-100"
+                          : "opacity-0"
+                      }`}
                       animate={{ x: [0, 2, 0] }}
                       transition={{ duration: 0.6, repeat: Infinity }}
                     >

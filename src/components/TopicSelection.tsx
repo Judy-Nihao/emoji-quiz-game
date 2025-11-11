@@ -20,6 +20,7 @@ export const TopicSelection = ({
 }: TopicSelectionProps) => {
   const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleMouseEnter = (index: number) => {
     if (hoveredIndex !== index) {
@@ -28,9 +29,15 @@ export const TopicSelection = ({
     }
   };
 
-  const handleSelect = (e: React.MouseEvent, topicId: string) => {
+  const handleSelect = (
+    e: React.MouseEvent,
+    topicId: string,
+    index: number
+  ) => {
     e.stopPropagation();
+    setActiveIndex(index); // remember user's clicked option
     playConfirmSound();
+
     // Small delay to let sound play
     setTimeout(() => {
       onSelectTopic(topicId);
@@ -99,13 +106,17 @@ export const TopicSelection = ({
                     transition={{ delay: index * 0.1 }}
                   >
                     <button
-                      onClick={(e) => handleSelect(e, topic.id)}
+                      onClick={(e) => handleSelect(e, topic.id, index)}
                       onMouseEnter={() => handleMouseEnter(index)}
                       className="w-full text-left group gbc-button bg-white p-3 relative hover:bg-gbc-light transition-colors flex items-center justify-between"
                     >
                       {/* Selection arrow - Pokémon menu style */}
                       <motion.span
-                        className="absolute left-3 opacity-0 group-hover:opacity-100 text-lg"
+                        className={`absolute left-3 text-lg transition-opacity duration-200 ${
+                          hoveredIndex === index || activeIndex === index
+                            ? "opacity-100"
+                            : "opacity-0"
+                        }`}
                         animate={{ x: [0, 2, 0] }}
                         transition={{ duration: 0.6, repeat: Infinity }}
                       >
