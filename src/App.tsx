@@ -18,6 +18,7 @@ import {
   playErrorSound,
 } from "./utils/soundEffects";
 import "./src/i18n";
+import eruda from "eruda";
 
 type GameState =
   | "start"
@@ -34,6 +35,10 @@ interface Question {
 }
 
 const App = () => {
+  // for dev mode onlly
+  if (import.meta.env.DEV) {
+    eruda.init();
+  }
   const { t } = useTranslation();
   const [gameState, setGameState] = useState<GameState>("start");
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
