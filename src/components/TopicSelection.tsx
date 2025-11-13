@@ -2,10 +2,11 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { Topic } from "../constants";
-import { DialogueBox, DialogueText } from "./DialogueBox";
+import { DialogueText } from "./DialogueBox";
 import { PokemonFrame } from "./PokemonFrame";
 import { SoundToggle } from "./SoundToggle";
 import { playCursorSound, playConfirmSound } from "../utils/soundEffects";
+import { BackButton } from "./BackButton";
 
 interface TopicSelectionProps {
   topics: Topic[];
@@ -44,6 +45,12 @@ export const TopicSelection = ({
     }, 100);
   };
 
+  const handleBackTo = (e: { stopPropagation: () => void }) => {
+    e.stopPropagation();
+    playConfirmSound();
+    setTimeout(() => onBack(), 100);
+  };
+
   return (
     <div className="flex items-center justify-center p-4 bg-[#B4BFBE] h-app overflow-auto gbc-scanlines">
       <motion.div
@@ -56,33 +63,10 @@ export const TopicSelection = ({
         <div className="gbc-panel-outer-thick">
           <div className="gbc-window">
             {/* Header bar */}
-            <div className="gbc-header p-3 mb-1 relative flex items-center justify-between">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  playConfirmSound();
-                  setTimeout(() => onBack(), 100);
-                }}
-                className="gbc-button bg-white text-black min-w-12 min-h-12 hover:bg-gbc-light active:shadow-[inset_2px_2px_0_#8B9594] transition-all flex items-center justify-center"
-              >
-                <svg
-                  width="12"
-                  height="14"
-                  viewBox="0 0 12 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="rotate-180 shrink-0 mr-0.5"
-                >
-                  <path d="M0 0L12 7L0 14V0Z" fill="currentColor" />
-                </svg>
-              </button>
-
+            <div className="gbc-header px-3 py-8 mb-1 relative flex items-center justify-between">
               <h1 className="absolute left-0 right-0 text-center text-xs md:text-lg leading-loose pointer-events-none">
                 {t("common.select")}
               </h1>
-
-              {/* Sound toggle */}
-              <SoundToggle />
             </div>
 
             {/* Content */}
@@ -144,6 +128,14 @@ export const TopicSelection = ({
                   </motion.div>
                 ))}
               </div>
+            </div>
+          </div>
+          {/* Bottom buttons - BACK and Sound toggle */}
+          <div className="mt-2 flex items-center justify-between">
+            <BackButton onClick={onBack} />
+            {/* Sound toggle */}
+            <div className="">
+              <SoundToggle />
             </div>
           </div>
         </div>

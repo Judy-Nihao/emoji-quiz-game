@@ -8,8 +8,7 @@ import { ErrorScreen } from "./components/ErrorScreen";
 import { GameOver } from "./components/GameOver";
 import { Timer } from "./components/Timer";
 import { Scoreboard } from "./components/Scoreboard";
-import { Button } from "./components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { BackButton } from "./components/BackButton";
 import { EMOJI_CATEGORIES, TOPICS } from "./constants";
 import { SoundToggle } from "./components/SoundToggle";
 import {
@@ -259,14 +258,7 @@ const App = () => {
 
         {/* Bottom buttons - BACK and Sound toggle */}
         <div className="mt-2 flex items-center justify-between">
-          <Button
-            onClick={goToTopicSelection}
-            className="gbc-button bg-black text-white leading-normal min-w-12 min-h-10 px-4"
-          >
-            <ArrowLeft size={12} className="mr-2 inline" />
-            {t("common.back")}
-          </Button>
-
+          <BackButton onClick={goToTopicSelection} />
           {/* Sound toggle */}
           <div className="">
             <SoundToggle />
