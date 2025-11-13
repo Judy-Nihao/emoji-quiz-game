@@ -17,6 +17,7 @@ export interface EmojiCategories {
 
 export const EMOJI_CATEGORIES: EmojiCategories = {
   animals: [
+    // land
     { emoji: "🐶", name: "Dog Face" },
     { emoji: "🐱", name: "Cat Face" },
     { emoji: "🐭", name: "Mouse Face" },
@@ -49,6 +50,32 @@ export const EMOJI_CATEGORIES: EmojiCategories = {
     { emoji: "🐳", name: "Spouting Whale" },
     { emoji: "🦖", name: "T-Rex" },
     { emoji: "🦕", name: "Sauropod" },
+    { emoji: "🐴", name: "Horse" },
+    { emoji: "🦓", name: "Zebra" },
+    { emoji: "🦌", name: "Deer" },
+    { emoji: "🐗", name: "Boar" },
+    { emoji: "🦙", name: "Llama" },
+    { emoji: "🦒", name: "Giraffe" },
+    { emoji: "🐘", name: "Elephant" },
+    { emoji: "🦏", name: "Rhinoceros" },
+    { emoji: "🦛", name: "Hippopotamus" },
+    { emoji: "🐊", name: "Crocodile" },
+    { emoji: "🐍", name: "Snake" },
+    { emoji: "🐢", name: "Turtle" },
+    { emoji: "🦩", name: "Flamingo" },
+    { emoji: "🦚", name: "Peacock" },
+    { emoji: "🦜", name: "Parrot" },
+    // sea
+    { emoji: "🐡", name: "Pufferfish" },
+    { emoji: "🦑", name: "Squid" },
+    { emoji: "🦐", name: "Shrimp" },
+    // fantasy
+    { emoji: "🐉", name: "Dragon" },
+    { emoji: "🐲", name: "Dragon Face" },
+    { emoji: "🧜‍♂️", name: "Merman" },
+    { emoji: "🧜‍♀️", name: "Mermaid" },
+    { emoji: "🧚‍♂️", name: "Fairy" },
+    { emoji: "🧚‍♀️", name: "Fairy Female" },
   ],
   food: [
     { emoji: "🍎", name: "Red Apple" },

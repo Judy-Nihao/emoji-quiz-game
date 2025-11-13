@@ -51,7 +51,7 @@ const App = () => {
   const [isTimeout, setIsTimeout] = useState(false);
 
   const TOTAL_QUESTIONS = 10;
-  const TIMER_DURATION = 10;
+  const TIMER_DURATION = 5;
 
   // Generate random questions based on selected topic
   const generateQuestions = useCallback((topicId: string) => {

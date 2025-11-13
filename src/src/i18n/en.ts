@@ -12,7 +12,7 @@ export default {
     title: "WHO AM I?",
     game_title: "EMOJI QUIZ",
     welcome_message:
-      "Hello there!\nWelcome to the world\nof EMOJI!\n\nYour quest:\n▸ 10 questions\n▸ 10 sec each\n▸ Catch 'em all!",
+      "Hello there!\nWelcome to the world\nof EMOJI!\n\nYour quest:\n▸ 10 questions\n▸ 5 secs each\n▸ Catch 'em all!",
   },
   topic_selection: {
     instruction: "Choose your\npath, Trainer!",
