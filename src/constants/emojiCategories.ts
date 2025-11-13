@@ -78,12 +78,19 @@ export const EMOJI_CATEGORIES: EmojiCategories = {
     { emoji: "🧚‍♀️", name: "Fairy Female" },
   ],
   food: [
+    // fruit
     { emoji: "🍎", name: "Red Apple" },
     { emoji: "🍌", name: "Banana" },
     { emoji: "🍇", name: "Grapes" },
     { emoji: "🍓", name: "Strawberry" },
     { emoji: "🍉", name: "Watermelon" },
     { emoji: "🍊", name: "Tangerine" },
+    { emoji: "🍍", name: "Pineapple" },
+    { emoji: "🥭", name: "Mango" },
+    { emoji: "🥝", name: "Kiwi" },
+    { emoji: "🍑", name: "Peach" },
+
+    // snack
     { emoji: "🍕", name: "Pizza" },
     { emoji: "🍔", name: "Hamburger" },
     { emoji: "🍟", name: "French Fries" },
@@ -98,13 +105,43 @@ export const EMOJI_CATEGORIES: EmojiCategories = {
     { emoji: "🍭", name: "Lollipop" },
     { emoji: "🍫", name: "Chocolate Bar" },
     { emoji: "🍬", name: "Candy" },
+    { emoji: "🥨", name: "Pretzel" },
+    { emoji: "🥜", name: "Peanuts" },
+    { emoji: "🍯", name: "Honey Pot" },
+    { emoji: "🍡", name: "Dango" },
+
+    // vegetable
+    { emoji: "🥦", name: "Broccoli" },
+    { emoji: "🥕", name: "Carrot" },
+    { emoji: "🌽", name: "Corn" },
+    { emoji: "🥒", name: "Cucumber" },
+    { emoji: "🍆", name: "Eggplant" },
+    { emoji: "🥔", name: "Potato" },
+    { emoji: "🧄", name: "Garlic" },
+    { emoji: "🧅", name: "Onion" },
+
+    // drink
     { emoji: "\u2615\ufe0f", name: "Hot Beverage" },
     { emoji: "🥤", name: "Cup with Straw" },
+    { emoji: "🍵", name: "Green Tea" },
+    { emoji: "🥛", name: "Milk" },
+    { emoji: "🧃", name: "Juice Box" },
+    { emoji: "🍶", name: "Sake" },
+    { emoji: "🍷", name: "Wine" },
+
+    // asian
+    { emoji: "🍣", name: "Sushi" },
+    { emoji: "🍱", name: "Bento Box" },
+    { emoji: "🥟", name: "Dumpling" },
+    { emoji: "🍜", name: "Steaming Bowl" },
+    { emoji: "🍚", name: "Cooked Rice" },
+    { emoji: "🍙", name: "Rice Ball" },
   ],
   transportation: [
+    // car
     { emoji: "🚗", name: "Automobile" },
     { emoji: "🚕", name: "Taxi" },
-    { emoji: "🚙", name: "Sport Utility Vehicle" },
+    { emoji: "🚙", name: "SUV" },
     { emoji: "🚌", name: "Bus" },
     { emoji: "🚎", name: "Trolleybus" },
     { emoji: "🏎️", name: "Racing Car" },
@@ -119,16 +156,31 @@ export const EMOJI_CATEGORIES: EmojiCategories = {
     { emoji: "🚲", name: "Bicycle" },
     { emoji: "🛵", name: "Motor Scooter" },
     { emoji: "🏍️", name: "Motorcycle" },
+
+    // fly
     { emoji: "✈️", name: "Airplane" },
     { emoji: "🚁", name: "Helicopter" },
     { emoji: "🚀", name: "Rocket" },
     { emoji: "🛸", name: "Flying Saucer" },
+
+    // boat
     { emoji: "⛵", name: "Sailboat" },
     { emoji: "🚤", name: "Speedboat" },
     { emoji: "🛳️", name: "Passenger Ship" },
     { emoji: "⛴️", name: "Ferry" },
     { emoji: "🚢", name: "Ship" },
     { emoji: "⚓", name: "Anchor" },
+
+    // others
+    { emoji: "🚠", name: "Mountain Cableway" },
+    { emoji: "🚡", name: "Aerial Tramway" },
+    { emoji: "🛶", name: "Canoe" },
+    { emoji: "🛥️", name: "Motorboat" },
+    { emoji: "🚂", name: "Locomotive" },
+    { emoji: "🚆", name: "Train" },
+    { emoji: "🚇", name: "Metro" },
+    { emoji: "🚊", name: "Tram" },
+    { emoji: "🚝", name: "Monorail" },
   ],
   sports: [
     { emoji: "⚽", name: "Soccer Ball" },
