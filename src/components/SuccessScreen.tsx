@@ -81,7 +81,9 @@ export const SuccessScreen = ({ emoji, onContinue }: SuccessScreenProps) => {
                     backfaceVisibility: "hidden",
                   }}
                 >
-                  <div className="filter brightness-0 min-h-20">{emoji}</div>
+                  <div className="filter brightness-0 min-h-24 mt-4">
+                    {emoji}
+                  </div>
                 </motion.div>
 
                 {/* Back: revealed emoji */}
@@ -93,7 +95,7 @@ export const SuccessScreen = ({ emoji, onContinue }: SuccessScreenProps) => {
                   }}
                 >
                   <motion.div
-                    className="min-h-20"
+                    className="min-h-24 mt-4"
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 1, repeat: Infinity }}
                   >

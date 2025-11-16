@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,html}"], // v3 needs content
   theme: {
     extend: {
+      maxWidth: {
+        "quiz-card": "430px",
+      },
       fontSize: {
         "2xs": "10px",
       },

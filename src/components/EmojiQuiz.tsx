@@ -46,7 +46,7 @@ export const EmojiQuiz = ({
   };
 
   return (
-    <div className="w-full max-w-[500px] mx-auto">
+    <div className="w-full max-w-quiz-card mx-auto">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -121,7 +121,7 @@ export const EmojiQuiz = ({
                       ▶
                     </motion.span>
 
-                    <div className="break-all leading-5">
+                    <div className="break-words leading-5">
                       {option.toUpperCase()}
                     </div>
                   </Button>

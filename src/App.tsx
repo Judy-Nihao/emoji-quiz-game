@@ -193,7 +193,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col justify-center items-center p-3 bg-[#B4BFBE] h-app overflow-auto gbc-scanlines">
-      <div className="max-w-[500px] w-full">
+      <div className="max-w-quiz-card w-full">
         {/* Topic display - full width, centered, 150% larger, with 16px spacing */}
         {currentTopic && (
           <div className="mb-4 flex justify-center">

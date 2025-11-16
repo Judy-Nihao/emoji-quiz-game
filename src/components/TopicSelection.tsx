@@ -57,7 +57,7 @@ export const TopicSelection = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.2 }}
-        className="w-full max-w-[500px]"
+        className="w-full max-w-quiz-card"
       >
         {/* Main window */}
         <div className="gbc-panel-outer-thick">

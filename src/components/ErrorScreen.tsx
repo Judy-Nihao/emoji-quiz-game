@@ -45,7 +45,7 @@ export const ErrorScreen = ({
     >
       {/* GBC-style error window */}
       <motion.div
-        className="max-w-md w-full mx-4 gbc-panel-outer bg-[#E53935]"
+        className="w-full mx-4 gbc-panel-outer bg-[#E53935] max-w-quiz-card"
         animate={{ x: [-3, 3, -3, 3, 0] }}
         transition={{ duration: 0.3 }}
         style={{ padding: "4px" }}
@@ -86,7 +86,9 @@ export const ErrorScreen = ({
                     backfaceVisibility: "hidden",
                   }}
                 >
-                  <div className="filter brightness-0 min-h-20">{emoji}</div>
+                  <div className="filter brightness-0 min-h-24 mt-4">
+                    {emoji}
+                  </div>
                 </motion.div>
 
                 {/* Back: revealed emoji */}
@@ -98,7 +100,7 @@ export const ErrorScreen = ({
                   }}
                 >
                   <motion.div
-                    className="min-h-20"
+                    className="min-h-24 mt-4"
                     animate={{ rotate: [0, -5, 5, 0] }}
                     transition={{
                       duration: 1,
